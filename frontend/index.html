@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link href="styles/hover.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="styles/form-data-json-object/src/formToJson.js"></script>
+    <title>Document</title>
+  </head>
+  <body onload="typeWriter()">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="#counter">Covid Counter</a>
+      <a href="#form">Submit Details</a>
+      <a href="#NotificationDetails">Notification</a>
+      <a href="#Bed">Bed Details</a>
+      <a href="#casetracker">Case Tracker</a>
+    </div>
+
+    <div id="main">
+      <div class="navbar">
+        <div class="logo">
+          <div class="circle">
+            <img
+              src="assets/11391845771556280999-128.png"
+              onclick="openNav()"
+              class="menu"
+            />
+          </div>
+        </div>
+        <div class="buttons">
+          <button type="button" class="btn btn-info hvr-grow but2" data-toggle="modal" data-target="#M1""">
+            Contact and Helpline Information
+          </button>
+          <button type="button" class="btn btn-info hvr-grow but2" data-toggle="modal" data-target="#M1">
+            Notifications and advisories
+          </button>
+          <button type="button" class="btn btn-info hvr-grow but2" data-toggle="modal" data-target="#M1">
+            Hospitals Dashboards
+          </button>
+        </div>
+      </div>
+      <div class="jumbo">
+        <p id="demo"></p>
+        <a href="demo.html"><div class="globe"><img src="assets/icons8-globe-50.png"  class="globeimg"></div></a>
+      </div>
+
+      <a id="counter">
+      <div class="counter">
+        <div class="middle">
+            <div class="counting-sec">
+                <div class="inner-width">
+                    <div class="col but1 icon">
+                        <i class="fa fa-thermometer-quarter "></i>
+                        <div class="num">37,137,720</div>
+                        Total cases
+                    </div>
+    
+                    <div class="col but1 icon">
+                        <i class="fa fa-user-plus "></i>
+                        <div class="num">1,073,145</div>
+                        Total Deaths
+                    </div>
+    
+                    <div class="col but1 icon">
+                        <i class="fa fa-users icon"></i>
+                        <div class="num">27,911,342</div>
+                        Total Recovered
+                    </div>
+    
+                    <div class="col but1 icon">
+                        <i class="fa fa-plus icon"></i>
+                        <div class="num">358,354</div>
+                        New cases
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </a>
+             <a id="form"></a>
+            <div>
+              <form class="form-horizontal full">
+                <fieldset>
+            
+                  <!-- Form Name -->
+                  <legend>Patient Details</legend>
+            
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="textinput">Patient ID</label>
+                    <div class="col-md-4">
+                      <input id="textinput" name="patient ID" type="text" placeholder="" class="form-control input-md">
+            
+                    </div>
+                  </div>
+            
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="textinput">Reported Date</label>
+                    <div class="col-md-4">
+                      <input id="textinput" name="Reported Date" type="text" placeholder="" class="form-control input-md">
+            
+                    </div>
+                  </div>
+            
+                  <!-- Multiple Radios -->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="radios">Gender</label>
+                    <div class="col-md-4">
+                      <div class="radio">
+                        <label for="radios-0">
+                          <input type="radio" name="gender" id="radios-0" value="1" checked="checked" class="radio">
+                          Male
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label for="radios-1">
+                          <input type="radio" name="gender" id="radios-1" value="2" class="radio">
+                          Female
+                        </label>
+                      </div>
+                      <div class="radio">
+                        <label for="radios-2">
+                          <input type="radio" name="gender" id="radios-2" value="3">
+                          Other
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="textinput">Age</label>
+                    <div class="col-md-4">
+                      <input id="textinput" name="age" type="text" placeholder="" class="form-control input-md">
+            
+                    </div>
+                  </div>
+            
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="textinput">State</label>
+                    <div class="col-md-4">
+                      <input id="textinput" name="State" type="text" placeholder="" class="form-control input-md">
+            
+                    </div>
+                  </div>
+            
+                  <!-- Select Basic -->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="selectbasic">Status</label>
+                    <div class="col-md-4">
+                      <select id="selectbasic" name="status" class="form-control">
+                        <option value="1">Hospitalized/Quarantined</option>
+                        <option value="2">Recovered</option>
+                        <option value="3">Deceased</option>
+                      </select>
+                    </div>
+                  </div>
+            
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="travel History">Travel History</label>
+                    <div class="col-md-4">
+                      <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+                      <span class="help-block">(if any)</span>
+                    </div>
+                  </div>
+            
+                  <!-- Text input-->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="textinput">Symptoms</label>
+                    <div class="col-md-4">
+                      <input id="textinput" name="Symptoms" type="text" placeholder="" class="form-control input-md">
+                      <span class="help-block">(if any)</span>
+                    </div>
+                  </div>
+            
+                  <!-- Button (Double) -->
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="button1id"></label>
+                    <div class="col-md-8">
+                      <button id="button1id" name="button1id" class="btn btn-info hvr-grow but2 " type="submit">Add</button>
+                      <button id="" name="" class="btn btn-info hvr-grow but2">Remove</button>
+                    </div>
+                  </div>
+            
+                </fieldset>
+              </form>
+            </div>
+            <a id="casetracker"></a>
+            <div class="container">
+              <canvas id="myChart"></canvas>
+              <div class="download"><button class="btn btn-info hvr-grow but2 down"><img class="icondow" src="assets/—Pngtree—download arrow vector icon white_5249045.png"></button></div>
+            </div>
+            
+            <a id="NotificationDetails">
+            <div class="table1">
+              <table id="customers">
+                <tr>
+                  <th>lorem</th>
+                  <th>lorem</th>
+                  <th>lorem</th>
+                  <th>Lorem.</th>
+                  <th>lorem.</th>
+                  <th>Lorem.</th>
+                  <th>Lorem.</th>
+                </tr>
+                <tr>
+                  <td>lorem/td>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                </tr>
+                <tr>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                </tr>
+                <tr>
+                 
+            </div>
+            </a>
+            
+            <div class="table2">
+              <table id="customers">
+                <tr>
+                  <th>lorem</th>
+                  <th>lorem</th>
+                  <th>lorem</th>
+                </tr>
+                <tr>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                 
+                </tr>
+                <tr>
+                  
+                  <td>lorem</td>
+                  <td>lorem</td>
+                  <td>lorem</td>
+                </tr>
+                
+            </div>
+            <a id="Bed"></a>
+            
+    </div>
+    <div class="a"><img src="assets/1186581-e91e63 (1).png" /></div>
+    <div class="b"><img src="assets/1186581-e91e63 (1).png" /></div>
+    <div class="c"><img src="assets/1186581-e91e63 (1).png" /></div>
+    <div class="d"><img src="assets/1186581-e91e63 (1).png" /></div>
+    <div class="e"><img src="assets/1186581-e91e63 (1).png" /></div>
+    <div class="modal fade" id="M1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <div class="modal-header">
+            <h4 class="modal-title">COVID-19 National helpline number</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+    
+          <div class="modal-body"><p>+91-11-23978046</p></div>
+    
+    
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="M2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <div class="modal-header">
+            <h4 class="modal-title">Advisory for Gated Residential Complexes with regards to COVID-19</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+    
+          <div class="modal-body">Maintain social distancing
+            Wear masks
+            Get out of the house when necessary</div>
+    
+    
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="M3">
+      <div class="modal-dialog">
+        <div class="modal-content">
+    
+          <div class="modal-header">
+            <h4 class="modal-title">Total number of beds available </h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+    
+          <div class="modal-body">23404</div>
+    
+    
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    
+
+    
+           
+
+    
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      /* Set the width of the side navigation to 0 */
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+    <script>
+      var i = 0;
+      var txt = "We will fight against COVID-19 together.Just Remeber to wash hand and wear a mask.";
+      var speed = 200;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("demo").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    </script>
+    <script>
+      $(document).ready(function () {
+        animateDiv(".a");
+        animateDiv(".b");
+        animateDiv(".c");
+        animateDiv(".d");
+        animateDiv("e");
+      });
+
+      function makeNewPosition() {
+        // Get viewport dimensions (remove the dimension of the div)
+        var h = $(window).height() - 50;
+        var w = $(window).width() - 50;
+
+        var nh = Math.floor(Math.random() * h);
+        var nw = Math.floor(Math.random() * w);
+
+        return [nh, nw];
+      }
+
+      function animateDiv(myclass) {
+        var newq = makeNewPosition();
+        $(myclass).animate({ top: newq[0], left: newq[1] }, 10000, function () {
+          animateDiv(myclass);
+        });
+      }
+    </script>
+    <script type="text/javascript">
+        $(".num").counterUp({ delay: 10, time: 500 });
+    </script>
+    <script>
+      let myChart = document.getElementById('myChart').getContext('2d');
+
+      // Global options
+      Chart.defaults.global.defaultFontFamily = 'Lato';
+      Chart.defaults.global.defaultFontSize = 18;
+      Chart.defaults.global.defaultFontColor = '#fbeee4';
+
+      let covidCasesNew = new Chart(myChart, {
+        type: 'bar',  // can be anything pie chart, bar, line , radar etc
+        data: {
+          labels: ['Oct. 4', 'Oct. 5', 'Oct. 6', 'Oct. 7', 'Oct. 8', 'Oct. 9', 'Oct. 10'],
+          datasets: [{
+            label: 'Total new cases',
+            data: [75829,
+              74442,
+              61267,
+              72049,
+              78524,
+              70496,
+              73272
+
+
+            ],
+            backgroundColor: [
+              '#fbeee4',
+              '#fbeee4',
+              '#fbeee4',
+              '#fbeee4',
+              '#fbeee4',
+              '#fbeee4',
+              '#fbeee4'
+
+            ],
+            borderWidth: 1,
+            borderColor: '#2952a3',
+            hoverBorderWidth: 3,
+            hoverBorderColor: '#fbeee4'
+
+          }
+          ]
+
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'New Covid-19 Cases Tracker',
+            fontSize: 25
+          },
+          legend: {
+            position: 'right',
+            labels: {
+              fontColor: '#000'
+            }
+          },
+
+
+        }
+
+      })
+    </script>
+    <script>
+       
+    </script>
+  </body>
+</html>
