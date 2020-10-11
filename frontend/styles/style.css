@@ -1,0 +1,274 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #757575;
+  color: white;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+  z-index: 1;
+}
+
+.navbar {
+  padding: 0;
+
+  width: 100;
+}
+.logo {
+  width: 220px;
+
+  margin: 0px;
+  padding: 0;
+}
+.circle {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  clip-path: circle(99.3% at 0 0);
+}
+.menu {
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 1000px;
+
+  padding: 2px;
+}
+
+.but2 {
+  height: 100px;
+  width: 200px;
+  border-radius: 200px;
+
+  background: #757575;
+  box-shadow: 28px 28px 74px #313131, -28px -28px 74px #b9b9b9;
+}
+div.a {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+}
+
+div.b {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  z-index: 0;
+}
+div.c {
+  width: 50px;
+  height: 50px;
+  z-index: 0;
+  position: fixed;
+}
+div.d {
+  width: 50px;
+  height: 50px;
+  z-index: 0;
+  position: fixed;
+}
+div.d {
+  width: 50px;
+  height: 50px;
+  z-index: 0;
+
+  position: fixed;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+.middle {
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  margin: 0px;
+}
+.counting-sec {
+  padding: 40px 10px;
+  width: 100%;
+  background-color: linear-gradient(90deg, #3c6382, #82ccdd);
+}
+.inner-width {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+.col {
+  flex: 1;
+  text-align: bottom;
+  padding: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.col i {
+  font-size: 40px;
+  color: #333;
+}
+.num {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.jumbo {
+  height: 550px;
+}
+#demo {
+  font-size: 50px;
+}
+.globe {
+  background: #757575;
+  box-shadow: 28px 28px 74px #313131, -28px -28px 74px #b9b9b9;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  margin-left: 1080px;
+}
+.globeimg {
+  margin-top: 25px;
+  height: 50px;
+  width: 50px;
+  margin-left: 25px;
+}
+.counter {
+  margin-bottom: 50px;
+}
+#large {
+  width: 98%;
+  height: 92%;
+  padding: 0;
+}
+
+#large-content {
+  height: 99%;
+}
+.icon {
+  color: white;
+}
+.but1 {
+  background: #757575;
+  box-shadow: 28px 28px 74px #313131, -28px -28px 74px #b9b9b9;
+  border-radius: 50px;
+}
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 30px;
+  background: #757575;
+  box-shadow: 28px 28px 74px #313131, -28px -28px 74px #b9b9b9;
+  border-radius: 50px;
+}
+
+#customers td,
+#customers th {
+  border: 3px solid #9b9b9b;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #757575;
+}
+
+#customers tr:hover {
+  background-color: #9b9b9b;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4f4f4f;
+  color: white;
+}
+.table1 {
+  margin-top: 40x;
+}
+
+.table2 {
+  margin-top: 30px;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+}
+.radio {
+  display: inline-block;
+}
+.full {
+  background-color: #757575;
+  width: 85%;
+  margin: 40px auto;
+  margin-bottom: 50px;
+  box-shadow: 28px 28px 74px #313131, -28px -28px 74px #b9b9b9;
+  border-radius: 50px;
+}
+.container {
+  box-shadow: 28px 28px 74px #313131, -28px -28px 74px #b9b9b9;
+  border-radius: 50px;
+  height: 95%;
+  width: 80%;
+}
+.down {
+  margin: 10px auto;
+}
+.download {
+  display: flex;
+  align-items: center;
+}
+.icondow {
+  margin-bottom: 15px;
+}
